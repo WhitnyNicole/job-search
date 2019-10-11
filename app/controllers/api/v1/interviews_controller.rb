@@ -18,7 +18,7 @@ class Api::V1::InterviewsController < ApplicationController
     @interview = Interview.new(interview_params)
 
     if @interview.save
-      render json: @interview, status: :created, location: @interview
+      render json: @interview
     else
       render json: @interview.errors, status: :unprocessable_entity
     end
