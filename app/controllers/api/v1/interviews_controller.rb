@@ -1,19 +1,16 @@
 class Api::V1::InterviewsController < ApplicationController
   before_action :set_interview, only: [:show, :update, :destroy]
 
-  # GET /interviews
   def index
     @interviews = Interview.all
 
     render json: @interviews
   end
 
-  # GET /interviews/1
   def show
     render json: @interview
   end
 
-  # POST /interviews
   def create
     @interview = Interview.new(interview_params)
 
@@ -24,7 +21,6 @@ class Api::V1::InterviewsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /interviews/1
   def update
     if @interview.update(interview_params)
       render json: @interview
@@ -33,18 +29,15 @@ class Api::V1::InterviewsController < ApplicationController
     end
   end
 
-  # DELETE /interviews/1
   def destroy
     @interview.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_interview
       @interview = Interview.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def interview_params
       params.require(:interview).permit(:company_name, :location, :salary, :day, :position)
     end
