@@ -1,24 +1,8 @@
-# README
+# Job Search App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend (Rails API) of the Job Search App. Frontend can be found here: https://github.com/WhitnyNicole/job-search-react-redux. 
 
-Things you may want to cover:
+This app is meant to be used as a central hub to contain all of your job related resources. Users can create an interview and a review. 
 
-* Ruby version
+You will need to clone both repositories in order to run this app. Once this repository is cloned, you will run bundle install, rake db:migrate, rake db:seed,and then rails s, the app will automatically start on localhost:3001. Your frontend will run on localhost:3000.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
