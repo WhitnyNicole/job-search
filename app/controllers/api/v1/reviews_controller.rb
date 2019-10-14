@@ -39,6 +39,6 @@ class Api::V1::ReviewsController < ApplicationController
     end
 
     def review_params
-      params.require(:review).permit(:inquiry, :answer)
+      params.require(:review).permit(:inquiry, :answer, :interview_id)
     end
 end
